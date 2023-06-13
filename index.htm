@@ -68,16 +68,19 @@
             <div class="tytul_podatku">&#128173;Jakie są rodzaje podatków?</div>
             </header>
                 <button id="be" onmouseover="bezpos()" class="aktywny">Bezpośrednie</button>
-                <button onmouseover="posr()">Pośrednie </button>
+                <button id="po" onmouseover="posr()">Pośrednie </button>
                <div class="rodzaje" style="display: block;" id="bezpo"> Bezpośrednie: nałożone na dochód lub majątek podatnika, np. podatek dochodowy, gruntowy, spadkowy </div>
                <div class="rodzaje" id="pos">Pośrednie Pośrednienakładane na przedmiot spożycia, np. VAT, akcyza – płaci go konsument.</div>
                <script>
                 function bezpos() {
+                    document.getElementById("po").classList.remove("aktywny");
+                    document.getElementById("be").classList.add("aktywny");
                     document.getElementById("bezpo").style.display = "block";
                     document.getElementById("pos").style.display = "none";
                 }
                 function posr() {
                     document.getElementById("be").classList.remove("aktywny");
+                    document.getElementById("po").classList.add("aktywny");
                     document.getElementById("bezpo").style.display = "none";
                     document.getElementById("pos").style.display = "block";
                 }
