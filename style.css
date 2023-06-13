@@ -130,6 +130,7 @@ li {
     list-style-type: none;
     cursor: pointer;
     text-align: left;
+    width: 100%;
 }
 .rodzaje_pdt {
     display: flex;justify-content: center;background-color: rgba(8, 98, 29, 0.133);
@@ -137,4 +138,32 @@ li {
     border-radius: 28px;
     box-shadow: 0 0 4px red;
     margin: 28px;
+    flex-wrap: wrap;
+}
+
+button {
+    width: 40%;
+    font-size: 54px;
+    height: 228px;
+    margin:28px;
+    outline: none;
+    border:0;
+    background-color: wheat;
+    border-radius:8px;
+    cursor: pointer;
+    border:2px solid silver;
+}
+
+button:hover,.aktywny {
+    background-color: black;
+    color:white;
+}
+
+.rodzaje {
+    background-color: blue;
+    color:yellowgreen;
+    box-shadow: 0 0 2px rgb(255, 0, 208);
+    display: none;
+    width: 80%;
+    border-radius: 28px;
 }

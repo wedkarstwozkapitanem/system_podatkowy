@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Podatki</title>
     <meta rel="creator" content="Dominik Łempicki Kapitan">
+    <link rel="icon" type="image/x-icon" href="/logo.png">
 </head>
 <body>
     <header>
@@ -26,7 +27,7 @@
             <header>
             <div class="tytul_podatku">&#128173;Kto musi płacić podatek?</div>
             </header>
-         <div style="width: 100%;">&#128184; Płatnikami są:</div>
+         <div style="width: 100%;">&#129312;Płatnikami są:</div>
             <div class="rodzaje_pdt">
             <ul>
                 <li>&#9989; Osoby fizyczne</li>
@@ -39,10 +40,55 @@
         </div>
 
 
+        <div  style="display: flex;justify-content: center;flex-wrap: wrap;" class="tresc_podatku">
+            <header>
+            <div class="tytul_podatku">&#128209;Jakie są rodzaje podatków?</div>
+            </header>
+         <div style="width: 100%;">&#128184; Niektóre rodzaje podatków:</div>
+            <div class="rodzaje_pdt" style="width: 80%;background:rgb(10, 1, 46);box-shadow: 0 0 2px white;text-shadow: 0 0 2px orange;">
+                <li>&#128178; podatek dochodowy od osób fizycznych (PIT),</li>
+                <li>&#128178; podatek dochodowy od osób prawnych (CIT),</li>
+                <li>&#128178; podatek VAT,</li>
+                <li>&#128178; podatek rolny,</li>
+                <li>&#128178; podatek od spadków i darowizn,</li>
+                <li>&#128178; podatek od czynności cywilnoprawnych,</li>
+                <li>&#128178; podatek leśny,</li>
+                <li>&#128178; podatek od nieruchomości,</li>
+                <li>&#128178; podatek od środków transportowych,</li>
+                <li>&#128178; podatek tonażowy,</li>
+                <li>&#128178; podatek od wydobycia niektórych kopalin</li>
+            </div>
+        </div>
+
+
+
+        
+        <div  style="display: flex;justify-content: center;flex-wrap: wrap;" class="tresc_podatku">
+            <header>
+            <div class="tytul_podatku">&#128173;Jakie są rodzaje podatków?</div>
+            </header>
+                <button id="be" onmouseover="bezpos()" class="aktywny">Bezpośrednie</button>
+                <button onmouseover="posr()">Pośrednie </button>
+               <div class="rodzaje" style="display: block;" id="bezpo"> Bezpośrednie: nałożone na dochód lub majątek podatnika, np. podatek dochodowy, gruntowy, spadkowy </div>
+               <div class="rodzaje" id="pos">Pośrednie Pośrednienakładane na przedmiot spożycia, np. VAT, akcyza – płaci go konsument.</div>
+               <script>
+                function bezpos() {
+                    document.getElementById("bezpo").style.display = "block";
+                    document.getElementById("pos").style.display = "none";
+                }
+                function posr() {
+                    document.getElementById("be").classList.remove("aktywny");
+                    document.getElementById("bezpo").style.display = "none";
+                    document.getElementById("pos").style.display = "block";
+                }
+               </script>
+        </div>
+
+
 
     </main>
-    <aside>
+    <footer>
         &copy Dominik Łempicki 2bLO
-    </aside>
+    </footers>
 </body>
 </html>
