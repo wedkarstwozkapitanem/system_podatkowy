@@ -1,0 +1,140 @@
+body {
+    background-color: black;
+    color:white;
+    text-align: center;
+    font-family: fantasy;
+    font-size: 40px;
+    text-shadow: 0 0 2px silver;
+    letter-spacing: 4px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-width: 100%;
+}
+
+.tytul {
+    background-color: rgba(23, 22, 22, 0.61);
+    width:auto;
+    border-radius: 28px;
+    padding: 0px 8px 0px 8px;
+    animation: 1s obroc ease;
+    position: relative;
+    box-shadow: 0 0 2px rgb(0, 255, 38);
+    font-family: cursive;
+    margin-bottom:100px;
+    background-color: rgba(4, 134, 248, 0.063);
+}
+
+@keyframes obroc {
+    0% {
+        top:-240px;
+    }
+    100%{
+        top:0;
+    }
+}
+
+
+
+.tresc_podatku {
+    position: relative;
+    width: 80%;
+    min-height: 88px;
+    background-color: rgba(10, 10, 10, 0.792);
+    box-shadow: 0 0 2px rgba(255, 255, 0, 0.758);
+    padding: 48px 8px 10px 8px;
+    border-radius: 28px;
+    letter-spacing: 1px;
+    margin-bottom:88px;
+    animation: 6s jasnosc ease,8s podswietlenie infinite ;
+}
+@keyframes podswietlenie {
+    0%,100% {
+        box-shadow: 0 0 4px yellow;
+    }
+    50% {
+        box-shadow: 0 0 4px rgb(0, 255, 26) ;
+    }
+}
+
+.tytul_podatku {
+    position: absolute;
+    top:-40px;
+    left:88px;
+    text-shadow: 0 0 2px red;
+    animation: 4s pokaz ease;
+    width: fit-content;
+    z-index: 12;
+    text-align: left;
+    background-color: rgb(21, 21, 21);
+    font-size: 44px;
+    border-radius: 28px;
+    padding: 4px;
+    box-shadow: 0 0 2px orange;
+    font-family: cursive;
+    display: inline-block;
+    text-wrap: nowrap;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+@keyframes pokaz {
+    0% {
+        left:50%;
+    }
+    100% {
+        left:88px;
+    }
+}
+
+@keyframes jasnosc {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .tresc_podatku {
+        width: 100%;
+    }
+    .tytul {
+        font-size: 28px;
+    }
+
+    .tytul_podatku {
+        top:-20px;
+        left:5%;
+        font-size: 24px;
+    }
+    .rodzaje_pdt {
+        width: 100% !important;
+    }
+}
+
+aside {
+    font-size: 18px;
+    margin-top:88px;
+}
+
+li {
+    text-decoration: none;
+    list-style-type: none;
+    cursor: pointer;
+    text-align: left;
+}
+.rodzaje_pdt {
+    display: flex;justify-content: center;background-color: rgba(8, 98, 29, 0.133);
+    width: 60%;
+    border-radius: 28px;
+    box-shadow: 0 0 4px red;
+    margin: 28px;
+}
